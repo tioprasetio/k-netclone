@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+</head>
+
+<body class="bg-[#fafafa]">
+    <nav class="bg-[#fafafa] p-4 w-full">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="https://k-net.co.id/assets/images/logo.png" alt="Logo" class="md:w-18 md:h-18 w-9 h-9 mr-2">
+            <div class="hidden md:flex justify-flex-start flex flex-wrap space-x-4 items-center font-medium">
+                <a href="#"
+                    class="cursor-pointer p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Beranda</a>
+                <!-- Dropdown Product -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Product
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Ayurveda
+                            Series</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Personal
+                            Care</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Other</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Paket Promo &
+                            Bundling</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Product
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Beauty
+                                Care</a>
+                            <a href="#"
+                                class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Bodywear</a>
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Dietary &
+                                Herbal Supplements</a>
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Health
+                                Drinks</a>
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Health
+                                Accessories</a>
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Health
+                                Care</a>
+                            <a href="#"
+                                class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Household</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Sales & Bonus -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Sales & Bonus
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Info
+                            Jaringan</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Bonus
+                            Report</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Cek
+                            Transaksi</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Keuntungan
+                            Langsung COD</a>
+                        <!-- Pendaftaran (memiliki submenu) -->
+                        <div class="relative">
+                            <button id="submenu-btn"
+                                class="w-full text-left px-4 py-2 flex justify-between hover:text-white hover:bg-[#74ac80] rounded-md">
+                                Transfer BV Personal▸
+                            </button>
+                            <!-- Submenu -->
+                            <div id="submenu"
+                                class="absolute left-full top-0 ml-1 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                                <a href="#"
+                                    class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Single
+                                    TTP</a>
+                                <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Multi
+                                    TTP</a>
+                            </div>
+                        </div>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Undo Transfer
+                            BV Personal</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Aktivasi
+                            Voucher Cash/Product</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Voucher Free
+                            Pembelanjaan 50BV 19-20 Januari 2025</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Promo Info -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Promo Info
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Voucher Promo
+                            Pembelanjaan</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Jadwal Acara
+                            K-Link</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Pendaftaran Distributor -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Pendaftaran Distributor
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Pendaftaran
+                            Distributoer</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">List Rekrutan
+                            Voucher SK Mahasiswa</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Daftar
+                            Rekrutan Member</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Landing Page Recruiter -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Landing Page Recruiter
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Update
+                            Sponsor</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Perjalanan Rohani -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Perjalanan Rohani
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <!-- Pendaftaran (memiliki submenu) -->
+                        <div class="relative">
+                            <button id="submenu-btn"
+                                class="w-full text-left px-4 py-2 flex justify-between hover:text-white hover:bg-[#74ac80] rounded-md">
+                                Pendaftaran▸
+                            </button>
+                            <!-- Submenu -->
+                            <div id="submenu"
+                                class="absolute md:right-full top-0 ml-1 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                                <a href="#"
+                                    class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Umroh</a>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Ziarah</a>
+                            </div>
+                        </div>
+                        <!-- Cek Mutasi (Ditaruh di dalam dropdown-menu utama) -->
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Cek
+                            Mutasi</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Setor
+                            Cicilan</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Cetak
+                            Voucher</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Reprint Bukti
+                            Pendaftaran</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Download -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ Download
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form
+                            Warkat</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form
+                            Perubahan Alamat</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form
+                            Perubahan Nama</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form
+                            Perubahan Rekening</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form
+                            Pengajuan Rekening Baru</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Form Surat
+                            Pernyataan Kuasa Rekening</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Formulir
+                            Keikutsertaan Challenge 2022</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown PPOB & XL Co Brand -->
+                <div class="relative inline-block dropdown">
+                    <button
+                        class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">
+                        ▼ PPOB & XL Co Brand
+                    </button>
+                    <div
+                        class="z-999 dropdown-menu absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Registrasi
+                            Virtual Account</a>
+                        <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">History VA
+                            Trx</a>
+                    </div>
+                </div>
+
+                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">SK
+                    Mahasiswa</a>
+                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">ID
+                    Card</a>
+                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Lucky
+                    Draw</a>
+                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Promo
+                    Upgrade Member</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="menu"
+            class="hidden md:hidden mt-2 items-center text-center bg-white rounded-md shadow-lg p-2 space-y-4">
+            <a href="#" class="block p-2 text-[#353535] hover:text-white hover:bg-[#74ac80] px-2 py-1">Beranda</a>
+
+            <!-- Dropdown Product -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Product
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Ayurveda
+                        Series</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Personal Care</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Other</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Paket Promo & Bundling</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Beauty Care</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Bodywear</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Dietary & Herbal
+                        Supplements</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Health Drinks</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Health Accessories</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Health Care</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Household</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Sales & Bonus -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Sales & Bonus
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Info
+                        Jaringan</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Bonus Report</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Cek Transaksi</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Keuntungan Langsung COD</a>
+                    <!-- Pendaftaran (memiliki submenu) -->
+                    <div class="relative p-2">
+                        <button id="submenu-btn"
+                            class="block w-full text-center px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">
+                            Transfer BV Personal▸
+                        </button>
+                        <!-- Submenu -->
+                        <div id="submenu" class="left-0 mt-2 bg-white text-black rounded-md hidden">
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">Single
+                                TTP</a>
+                            <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-b-md">Multi
+                                TTP</a>
+                        </div>
+                    </div>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Undo Transfer BV
+                        Personal</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Aktivasi Voucher
+                        Cash/Product</a>
+                    <a href="#" class="block rounded-b-md px-4 py-2 hover:text-white hover:bg-[#74ac80]">Voucher Free
+                        Pembelanjaan 50BV 19-20 Januari 2025</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Promo Info -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Promo Info
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Voucher Promo
+                        Pembelanjaan</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Jadwal Acara
+                        K-Link</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Pendaftaran Distributor -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Pendaftaran Distributor
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Pendaftaran
+                        Distributor</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">List Rekrutan SK
+                        Mahasiswa</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Daftar Rekrutan
+                        Member</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Landing Page Recruit -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Landing Page Recruit
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Update
+                        Sponsor</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Perjalanan Rohani -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Perjalanan Rohani
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <!-- Pendaftaran (memiliki submenu) -->
+                    <div class="relative p-2">
+                        <button id="submenu-btn"
+                            class="block w-full text-center px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">
+                            Pendaftaran▸
+                        </button>
+                        <!-- Submenu -->
+                        <div id="submenu" class="left-0 mt-2 bg-white text-black rounded-md hidden">
+                            <a href="#"
+                                class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">Umroh</a>
+                            <a href="#"
+                                class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-b-md">Ziarah</a>
+                        </div>
+                    </div>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Cek Mutasi</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Setor Cicilan</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Cetak Voucher</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Reprint Bukti
+                        Pendaftaran</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Download -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ Download
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Warkat</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Perubahan Alamat</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Perubahan Nama</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Perubahan Rekening</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Pengajuan Rekening
+                        Baru</a>
+                    <a href="#" class="block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Form Surat Pernyataan Kuasa
+                        Rekening</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Formulir
+                        Keikutsertaan Challenge 2022</a>
+                </div>
+            </div>
+
+            <!-- Dropdown PPOB & XL Co Brand -->
+            <div class="relative inline-block dropdown w-full">
+                <button
+                    class="dropdown-btn cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none w-full">
+                    ▼ PPOB & XL Co Brand
+                </button>
+                <div class="z-999 dropdown-menu left-0 mt-2 text-black rounded-md bg-gray-100 hidden">
+                    <a href="#" class="rounded-t-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">Registrasi
+                        Virtual Account</a>
+                    <a href="#" class="rounded-b-md block px-4 py-2 hover:text-white hover:bg-[#74ac80]">History VA
+                        Trx</a>
+                </div>
+            </div>
+
+            <a href="#" class="block p-2 text-[#353535] hover:text-white hover:bg-[#74ac80] px-2 py-1">SK Mahasiswa</a>
+            <a href="#" class="block p-2 text-[#353535] hover:text-white hover:bg-[#74ac80] px-2 py-1">ID Card</a>
+            <a href="#" class="block p-2 text-[#353535] hover:text-white hover:bg-[#74ac80] px-2 py-1">Lucky Draw</a>
+            <a href="#" class="block p-2 text-[#353535] hover:text-white hover:bg-[#74ac80] px-2 py-1">Promo Upgrade
+                Member</a>
+
+            <!-- Profile dropdown -->
+            <!-- <div class="relative px-2 py-1">
+                <div class="flex items-center space-x-3">
+                    <button type="button"
+                        class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">Open user menu</span>
+                        <img class="size-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="">
+                    </button>
+                    <h1 class="text-white">Tio Yudho Prasetio</h1>
+                </div>
+            </div> -->
+        </div>
+    </nav>
+
+    <div class="bg-[#fafafa] w-full">
+        <div class="bg-[#fff0d7] flex justify-between items-center p-5">
+            <div class="rounded-md p-2">
+                <form action="https://k-net.co.id/shop/product/name" method="post" id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form" class="flex">
+                    <input class="p-3 bg-white focus:outline-none" type="text" name="name" value=""
+                        placeholder="Cari Produk...">
+                    <input class="text-white font-bold bg-[#ec7500] px-4 py-2 rounded-r-full cursor-pointer"
+                        type="submit" value="GO">
+                </form>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 findUs">
+                <span class="text-gray-700 font-semibold">Find us here</span>
+                <div class="socialMedia flex space-x-3 cursor-pointer">
+                    <i class='bx bxl-instagram-alt text-3xl text-gray-600 hover:text-[#E4405F]'></i>
+                    <i class='bx bxl-facebook-circle text-3xl text-gray-600 hover:text-[#1877F2]'></i>
+                    <i class='bx bxl-twitter text-3xl text-gray-600 hover:text-[#1DA1F2]'></i>
+                    <i class='bx bxl-youtube text-3xl text-gray-600 hover:text-[#1DA1F2]'></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="bg-[#fafafa] p-4 w-full">
+        <div class="container mx-auto">
+            <h2 class="text-xl font-bold mb-4">Browse Category</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper mb-16">
+
+                    <!-- Card 1 -->
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                                <img src="https://img.icons8.com/color/96/000000/paid.png" class="w-24 h-24 object-cover"
+                                    alt="Cek Transaksi">
+                                <h3 class="text-lg font-semibold mt-2">Cek Transaksi</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://img.icons8.com/color/96/000000/reseller.png" class="w-24 h-24 object-cover"
+                                alt="Info Jaringan">
+                            <h3 class="text-lg font-semibold mt-2">Info Jaringan</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://img.icons8.com/color/96/000000/loyalty-card.png" class="w-24 h-24 object-cover"
+                                alt="Bonus">
+                            <h3 class="text-lg font-semibold mt-2">Bonus</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://img.icons8.com/color/96/000000/wallet.png" class="w-24 h-24 object-cover"
+                                alt="K-Wallet">
+                            <h3 class="text-lg font-semibold mt-2">K-Wallet</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://img.icons8.com/color/96/000000/shopping-cart.png" class="w-24 h-24 object-cover"
+                                alt="Keranjang">
+                            <h3 class="text-lg font-semibold mt-2">Keranjang</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Couple-icon.png" class="w-24 h-24 object-cover"
+                                alt="MyProfile">
+                            <h3 class="text-lg font-semibold mt-2">My Profile</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="swiper-slide">
+                    <a href="">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://www.k-net.co.id/assets/images/icon-law.png" class="w-24 h-24 object-cover"
+                                alt="Cek Transaksi">
+                            <h3 class="text-lg font-semibold mt-2">Kode Etik</h3>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <a href="" ></a>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                            <img src="https://www.k-net.co.id/assets/images/kmart_logo.jpeg" class="h-24 object-cover"
+                                alt="Cek Transaksi">
+                            <h3 class="text-lg font-semibold mt-2">Promo Upgrade Member</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination & Navigation -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#fafafa] p-4 w-full">
+        <div class="container mx-auto">
+            <h2 class="text-xl text-[#353535] font-bold mb-4">New Promo</h2>
+    
+            <!-- Wrapper untuk grid card -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    
+                <!-- Card Produk -->
+                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+    
+                    <!-- Kode Produk -->
+                    <p class="text-gray-500 text-sm font-semibold">HC075PX</p>
+    
+                    <!-- Gambar Produk -->
+                    <img src="https://k-net.co.id/assets/images/products/thumb/K-Ion%20Nano%20Premium%20X.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
+    
+                    <!-- Nama Produk -->
+                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">k-ion nano premium x</h3>
+    
+                    <!-- Harga -->
+                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp1.440.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp1.541.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
+                        </div>
+                    </div>
+    
+                    <!-- Button Masukkan Keranjang -->
+                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                        Masukkan Keranjang
+                    </button>
+    
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk -->
+                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+    
+                    <!-- Kode Produk -->
+                    <p class="text-[#353535] text-sm font-semibold">HD012</p>
+    
+                    <!-- Gambar Produk -->
+                    <img src="https://k-net.co.id/assets/images/products/thumb/NCell.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
+    
+                    <!-- Nama Produk -->
+                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">ncell - botanical beverage mix grape with brocoli extract</h3>
+    
+                    <!-- Harga -->
+                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp1.440.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp1.541.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
+                        </div>
+                    </div>
+    
+                    <!-- Button Masukkan Keranjang -->
+                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                        Masukkan Keranjang
+                    </button>
+    
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk -->
+                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+    
+                    <!-- Kode Produk -->
+                    <p class="text-gray-500 text-sm font-semibold">IDGD003</p>
+    
+                    <!-- Gambar Produk -->
+                    <img src="https://k-net.co.id/assets/images/products/thumb/Pupuk%20Bioboost%20Tablet.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
+    
+                    <!-- Nama Produk -->
+                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Pupuk Bioboost Tablet</h3>
+    
+                    <!-- Harga -->
+                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp498.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp534.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
+                        </div>
+                    </div>
+    
+                    <!-- Button Masukkan Keranjang -->
+                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                        Masukkan Keranjang
+                    </button>
+    
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk -->
+                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+    
+                    <!-- Kode Produk -->
+                    <p class="text-gray-500 text-sm font-semibold">HC075PX</p>
+    
+                    <!-- Gambar Produk -->
+                    <img src="https://k-net.co.id/assets/images/products/thumb/K-ION%20NANO%20PREMIUM%20BLACK%20BLACK.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
+    
+                    <!-- Nama Produk -->
+                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">k-ion nano premium 5 black</h3>
+    
+                    <!-- Harga -->
+                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp720.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-[#353535] text-lg">Rp771.000</span>
+                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
+                        </div>
+                    </div>
+    
+                    <!-- Button Masukkan Keranjang -->
+                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                        Masukkan Keranjang
+                    </button>
+    
+                </div>
+                <!-- End Card Produk -->
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="container bg-[#fff0d7] p-4 w-full">
+        <div class="search">
+        <div class="bg-white rounded-md p-2">
+            <form action="https://k-net.co.id/shop/product/name" method="post" id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form" class="validate form-inline" novalidate="">
+                <input type="text" name="name" value="" placeholder="Cari Produk...">
+                <input class="text-white font-bold bg-[#ec7500]" type="submit" value="GO">
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </div> -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // FUNGSI UNTUK KLIK DROPDOWN MENU
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ambil semua dropdown di halaman
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(dropdown => {
+                const btn = dropdown.querySelector(".dropdown-btn");
+                const menu = dropdown.querySelector(".dropdown-menu");
+
+                btn.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Mencegah event bubbling agar tidak tertutup langsung
+                    menu.classList.toggle("hidden");
+
+                    // Tutup dropdown lain jika ada yang terbuka
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.querySelector(".dropdown-menu").classList.add("hidden");
+                        }
+                    });
+                });
+            });
+
+            // Klik di luar dropdown untuk menutup semua dropdown
+            document.addEventListener("click", function () {
+                dropdowns.forEach(dropdown => {
+                    dropdown.querySelector(".dropdown-menu").classList.add("hidden");
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const submenuButtons = document.querySelectorAll("#submenu-btn");
+
+            submenuButtons.forEach(submenuBtn => {
+                const submenu = submenuBtn.nextElementSibling; // Ambil submenu setelah tombol
+
+                if (submenu) {
+                    // Toggle submenu ketika tombol diklik
+                    submenuBtn.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Hindari menutup dropdown utama
+                        submenu.classList.toggle("hidden");
+                    });
+
+                    // Pastikan submenu ikut tertutup saat klik di luar
+                    document.addEventListener("click", function (event) {
+                        if (!submenu.contains(event.target) && event.target !== submenuBtn) {
+                            submenu.classList.add("hidden");
+                        }
+                    });
+                }
+            });
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 }
+                }
+            });
+
+    </script>
+</body>
+
+</html>
