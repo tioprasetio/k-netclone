@@ -6,13 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* * {
+            outline: 1px solid red;
+        } */
+    </style>
 </head>
 
-<body class="bg-[#fafafa]">
-    <nav class="bg-[#fafafa] p-4 w-full">
+<body class="bg-[#fafafa] overflow-x-hidden">
+
+    <!-- Navbar Desktop -->
+    <nav class="bg-[#fafafa] p-4 w-full sticky top-0 z-50 drop-shadow-[0_10px_20px_rgba(0,0,0,0.13)]">
         <div class="container mx-auto flex justify-between items-center">
             <img src="https://k-net.co.id/assets/images/logo.png" alt="Logo" class="md:w-18 md:h-18 w-9 h-9 mr-2">
             <div class="hidden md:flex justify-flex-start flex flex-wrap space-x-4 items-center font-medium">
@@ -153,7 +166,7 @@
                             </button>
                             <!-- Submenu -->
                             <div id="submenu"
-                                class="absolute md:right-full top-0 ml-1 w-48 bg-white text-black rounded-md shadow-lg hidden">
+                                class="absolute left-full top-0 ml-1 w-48 bg-white text-black rounded-md shadow-lg hidden">
                                 <a href="#"
                                     class="block px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-md">Umroh</a>
                                 <a href="#"
@@ -212,16 +225,21 @@
                     </div>
                 </div>
 
-                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">SK
+                <a href="#"
+                    class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">SK
                     Mahasiswa</a>
-                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">ID
+                <a href="#"
+                    class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">ID
                     Card</a>
-                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Lucky
+                <a href="#"
+                    class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Lucky
                     Draw</a>
-                <a href="#" class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Promo
+                <a href="#"
+                    class="cursor-pointer text-[#353535] p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Promo
                     Upgrade Member</a>
             </div>
 
+            <!-- NAVBAR MOBILE -->
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-700 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -277,7 +295,7 @@
                     <div class="relative p-2">
                         <button id="submenu-btn"
                             class="block w-full text-center px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">
-                            Transfer BV Personal▸
+                            Transfer BV Personal ▸
                         </button>
                         <!-- Submenu -->
                         <div id="submenu" class="left-0 mt-2 bg-white text-black rounded-md hidden">
@@ -349,7 +367,7 @@
                     <div class="relative p-2">
                         <button id="submenu-btn"
                             class="block w-full text-center px-4 py-2 hover:text-white hover:bg-[#74ac80] rounded-t-md">
-                            Pendaftaran▸
+                            Pendaftaran ▸
                         </button>
                         <!-- Submenu -->
                         <div id="submenu" class="left-0 mt-2 bg-white text-black rounded-md hidden">
@@ -425,6 +443,7 @@
         </div>
     </nav>
 
+    <!-- Search Fitur -->
     <div class="bg-[#fafafa] w-full">
         <div class="bg-[#fff0d7] flex justify-between items-center p-5">
             <div class="rounded-md p-2">
@@ -433,7 +452,7 @@
                     <input class="p-3 bg-white focus:outline-none" type="text" name="name" value=""
                         placeholder="Cari Produk...">
                     <input class="text-white font-bold bg-[#ec7500] px-4 py-2 rounded-r-full cursor-pointer"
-                        type="submit" value="GO">
+                        type="submit" value="Cari">
                 </form>
             </div>
             <div class="hidden md:flex items-center space-x-4 findUs">
@@ -448,7 +467,28 @@
         </div>
     </div>
 
-    <!-- Section -->
+    <!-- Banner Promo -->
+    <div class="bg-[#fafafa] p-4 w-full">
+        <div class="container mx-auto">
+            <!-- Swiper Container -->
+            <div class="swiper promoSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="https://k-net.co.id/assets/images/promo.jpg" alt="Promo 1"
+                            class="w-full h-auto rounded-lg">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="https://k-net.co.id/assets/images/tracking.jpg" alt="Promo 2"
+                            class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Browse Category -->
     <div class="bg-[#fafafa] p-4 w-full">
         <div class="container mx-auto">
             <h2 class="text-xl font-bold mb-4">Browse Category</h2>
@@ -460,9 +500,10 @@
                     <!-- Card 1 -->
                     <div class="swiper-slide">
                         <a href="">
-                            <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                                <img src="https://img.icons8.com/color/96/000000/paid.png" class="w-24 h-24 object-cover"
-                                    alt="Cek Transaksi">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/9359/9359415.png"
+                                    class="w-24 h-24 object-cover" alt="Cek Transaksi">
                                 <h3 class="text-lg font-semibold mt-2">Cek Transaksi</h3>
                             </div>
                         </a>
@@ -470,74 +511,81 @@
 
                     <!-- Card 2 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://img.icons8.com/color/96/000000/reseller.png" class="w-24 h-24 object-cover"
-                                alt="Info Jaringan">
-                            <h3 class="text-lg font-semibold mt-2">Info Jaringan</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2885/2885417.png"
+                                    class="w-24 h-24 object-cover" alt="Info Jaringan">
+                                <h3 class="text-lg font-semibold mt-2">Info Jaringan</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 3 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://img.icons8.com/color/96/000000/loyalty-card.png" class="w-24 h-24 object-cover"
-                                alt="Bonus">
-                            <h3 class="text-lg font-semibold mt-2">Bonus</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2108/2108625.png"
+                                    class="w-24 h-24 object-cover" alt="Bonus">
+                                <h3 class="text-lg font-semibold mt-2">Bonus</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://img.icons8.com/color/96/000000/wallet.png" class="w-24 h-24 object-cover"
-                                alt="K-Wallet">
-                            <h3 class="text-lg font-semibold mt-2">K-Wallet</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3258/3258446.png"
+                                    class="w-24 h-24 object-cover" alt="K-Wallet">
+                                <h3 class="text-lg font-semibold mt-2">K-Wallet</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 5 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://img.icons8.com/color/96/000000/shopping-cart.png" class="w-24 h-24 object-cover"
-                                alt="Keranjang">
-                            <h3 class="text-lg font-semibold mt-2">Keranjang</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png"
+                                    class="w-24 h-24 object-cover" alt="Keranjang">
+                                <h3 class="text-lg font-semibold mt-2">Keranjang</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 6 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Couple-icon.png" class="w-24 h-24 object-cover"
-                                alt="MyProfile">
-                            <h3 class="text-lg font-semibold mt-2">My Profile</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/942/942748.png"
+                                    class="w-24 h-24 object-cover" alt="MyProfile">
+                                <h3 class="text-lg font-semibold mt-2">My Profile</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 7 -->
                     <div class="swiper-slide">
-                    <a href="">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
-                            <img src="https://www.k-net.co.id/assets/images/icon-law.png" class="w-24 h-24 object-cover"
-                                alt="Cek Transaksi">
-                            <h3 class="text-lg font-semibold mt-2">Kode Etik</h3>
-                        </div>
-                    </a>
+                        <a href="">
+                            <div
+                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/994/994377.png"
+                                    class="w-24 h-24 object-cover" alt="Cek Transaksi">
+                                <h3 class="text-lg font-semibold mt-2">Kode Etik</h3>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- Card 8 -->
-                    <a href="" ></a>
+                    <a href=""></a>
                     <div class="swiper-slide">
-                        <div class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center">
+                        <div
+                            class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
                             <img src="https://www.k-net.co.id/assets/images/kmart_logo.jpeg" class="h-24 object-cover"
                                 alt="Cek Transaksi">
                             <h3 class="text-lg font-semibold mt-2">Promo Upgrade Member</h3>
@@ -551,160 +599,431 @@
         </div>
     </div>
 
+    <!-- New Promo Container -->
     <div class="bg-[#fafafa] p-4 w-full">
         <div class="container mx-auto">
-            <h2 class="text-xl text-[#353535] font-bold mb-4">New Promo</h2>
-    
-            <!-- Wrapper untuk grid card -->
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl text-[#353535] font-bold">New Promo</h2>
+                <button type="button" class="cursor-pointer">
+                    <span class="text-xl text-[#28a154] font-medium">Lihat Semua</span>
+                </button>
+            </div>
+
+            <!-- Wrapper untuk grid card New Promo -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    
-                <!-- Card Produk -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-    
-                    <!-- Kode Produk -->
-                    <p class="text-gray-500 text-sm font-semibold">HC075PX</p>
-    
+
+                <!-- Card Produk 1 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
                     <!-- Gambar Produk -->
-                    <img src="https://k-net.co.id/assets/images/products/thumb/K-Ion%20Nano%20Premium%20X.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
-    
-                    <!-- Nama Produk -->
-                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">k-ion nano premium x</h3>
-    
-                    <!-- Harga -->
-                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp1.440.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202408/09-2bnxoc--K-Ion_Nano_Premium_X.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Ion Nano Premium x</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp1.400.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp1.541.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
-                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
                     </div>
-    
-                    <!-- Button Masukkan Keranjang -->
-                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                        Masukkan Keranjang
-                    </button>
-    
                 </div>
                 <!-- End Card Produk -->
 
-                <!-- Card Produk -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-    
-                    <!-- Kode Produk -->
-                    <p class="text-[#353535] text-sm font-semibold">HD012</p>
-    
+                <!-- Card Produk 2 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
                     <!-- Gambar Produk -->
-                    <img src="https://k-net.co.id/assets/images/products/thumb/NCell.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
-    
-                    <!-- Nama Produk -->
-                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">ncell - botanical beverage mix grape with brocoli extract</h3>
-    
-                    <!-- Harga -->
-                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp1.440.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                    <img src="https://k-net.co.id/assets/images/products/thumb/NCell.jpg" alt="Produk"
+                        class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">ncell - botanical beverage mix grape
+                            with brocoli extract</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp1.541.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
-                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
                     </div>
-    
-                    <!-- Button Masukkan Keranjang -->
-                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                        Masukkan Keranjang
-                    </button>
-    
                 </div>
                 <!-- End Card Produk -->
 
-                <!-- Card Produk -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-    
-                    <!-- Kode Produk -->
-                    <p class="text-gray-500 text-sm font-semibold">IDGD003</p>
-    
+                <!-- Card Produk 3 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
                     <!-- Gambar Produk -->
-                    <img src="https://k-net.co.id/assets/images/products/thumb/Pupuk%20Bioboost%20Tablet.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
-    
-                    <!-- Nama Produk -->
-                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Pupuk Bioboost Tablet</h3>
-    
-                    <!-- Harga -->
-                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp498.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/08-rp23v1--K-OMEGA_SQUA_PLUS.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Omega Squa</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp534.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
-                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
                     </div>
-    
-                    <!-- Button Masukkan Keranjang -->
-                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                        Masukkan Keranjang
-                    </button>
-    
                 </div>
                 <!-- End Card Produk -->
 
-                <!-- Card Produk -->
-                <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-    
-                    <!-- Kode Produk -->
-                    <p class="text-gray-500 text-sm font-semibold">HC075PX</p>
-    
+                <!-- Card Produk 4 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
                     <!-- Gambar Produk -->
-                    <img src="https://k-net.co.id/assets/images/products/thumb/K-ION%20NANO%20PREMIUM%20BLACK%20BLACK.jpg" alt="Produk" class="w-32 h-32 object-cover my-2">
-    
-                    <!-- Nama Produk -->
-                    <h3 class="text-lg text-left font-bold text-[#353535] mt-2">k-ion nano premium 5 black</h3>
-    
-                    <!-- Harga -->
-                    <div class="flex flex-row w-full mt-2 text-sm justify-between">
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp720.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah A</span>
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202403/04-867ma6--Gamat_Go.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Gamat Go</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp384.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <span class="text-[#353535] text-lg">Rp771.000</span>
-                            <span class="text-[#959595] text-xs">Harga Wilayah B</span>
-                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
                     </div>
-    
-                    <!-- Button Masukkan Keranjang -->
-                    <button class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                        Masukkan Keranjang
-                    </button>
-    
                 </div>
                 <!-- End Card Produk -->
-    
+
             </div>
         </div>
     </div>
 
+    <!-- Best Seller Container -->
+    <div class="bg-[#fafafa] p-4 mt-10 w-full mb-12">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl text-[#353535] font-bold">Best Seller</h2>
+                <button type="button" class="cursor-pointer">
+                    <span class="text-xl text-[#28a154] font-medium">Lihat Semua</span>
+                </button>
+            </div>
 
+            <!-- Wrapper untuk grid card Best Seller -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-    <!-- <div class="container bg-[#fff0d7] p-4 w-full">
-        <div class="search">
-        <div class="bg-white rounded-md p-2">
-            <form action="https://k-net.co.id/shop/product/name" method="post" id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form" class="validate form-inline" novalidate="">
-                <input type="text" name="name" value="" placeholder="Cari Produk...">
-                <input class="text-white font-bold bg-[#ec7500]" type="submit" value="GO">
-            </form>
+                <!-- Card Produk 1 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                    <!-- Gambar Produk -->
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/06-5u6i15--K-LIQUID_CHLOROPHYLL.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Liquid Chlorophyll (500Ml)</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
+                    </div>
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk 2 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                    <!-- Gambar Produk -->
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202401/11-hrtrf6--DURIAN.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-C Kopi Durian</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
+                    </div>
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk 3 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                    <!-- Gambar Produk -->
+                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202404/05-y5xa9d--WhatsApp_Image_2024-04-05_at_3_45_28_PM.jpeg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Kinotakara (10 Pcs)</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp480.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
+                    </div>
+                </div>
+                <!-- End Card Produk -->
+
+                <!-- Card Produk 4 -->
+                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                    <!-- Gambar Produk -->
+                    <img src="http://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202401/11-al4w4b--PROPOLIS.jpg"
+                        alt="Produk" class="w-full object-cover">
+
+                    <div class="p-4 w-full">
+                        <!-- Kode Produk -->
+                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
+                        <!-- Nama Produk -->
+                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Propolis Single Bottle</h3>
+
+                        <!-- Harga -->
+                        <div class="flex flex-row w-full mt-2 text-sm">
+                            <div class="flex flex-col text-left gap-1">
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
+                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
+                                </div>
+
+                                <div class="flex flex-row items-center">
+                                    <span class="text-[#959595] text-lg"><i
+                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
+                                    <span class="text-[#959595] text-lg px-1">|</span>
+                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Masukkan Keranjang -->
+                        <button
+                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
+                            Masukkan Keranjang
+                        </button>
+                    </div>
+                </div>
+                <!-- End Card Produk -->
+
+            </div>
         </div>
-        <div class="clearfix"></div>
     </div>
-    </div> -->
 
+    <!-- Footer Info -->
+    <div class="bg-[#f4f4f4] p-4 w-full">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+                <!-- Footer Kontak -->
+                <div class="pb-6 py-6">
+                    <h2 class="mb-4 font-bold text-xl text-[#ec7500]">Kontak Pengaduan Pelanggan</h2>
+                    <div class="flex mb-4">
+                        <div class="footer-text">K-Link Tower, Jalan Gatot Subroto Kav. 59A, Jakarta Selatan 12950,
+                            Indonesia.</div>
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <h3 class="font-medium">Working Hours:</h3>
+                        <div class="footer-text">Senin - Jum'at: 09:00 - 17:00 Wib</div>
+                    </div>
+                    <div class="flex mb-4 gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(84, 93, 105, 1);">
+                            <path
+                                d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z">
+                            </path>
+                        </svg>
+                        <div class="footer-text">customer_service@k-link.co.id</div>
+                    </div>
+                    <div class="flex mb-4 gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(84, 93, 105, 1);">
+                            <path
+                                d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z">
+                            </path>
+                        </svg>
+                        <div class="footer-text">0812-1011-1511</div>
+                    </div>
+                </div>
+
+                <!-- Footer Tentang K-Link -->
+                <div class="pb-6 py-6">
+                    <h2 class="mb-4 font-bold text-xl text-[#ec7500]">Tentang K-Link</h2>
+                    <ul>
+                        <li class="mb-2"><a href="">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="">Kenapa Harus K-Link</a></li>
+                        <li class="mb-2"><a href="">Biaya Kirim</a></li>
+                        <li class="mb-2"><a href="">Penggantian</a></li>
+                        <li class="mb-2"><a href="">Pengiriman</a></li>
+                        <li class="mb-2"><a href="">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Bantuan Untuk Anda -->
+                <div class="pb-6 py-6">
+                    <h2 class="mb-4 font-bold text-xl text-[#ec7500]">Bantuan Untuk Anda</h2>
+                    <ul>
+                        <li class="mb-2"><a href="">Cara Belanja</a></li>
+                        <li class="mb-2"><a href="">Keranjang Belanja</a></li>
+                        <li class="mb-2"><a href="">Akun Saya</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Pembayaran -->
+                <div class="pb-6 py-6">
+                    <h2 class="mb-4 font-bold text-xl text-[#ec7500]">Pembayaran</h2>
+                    <div class="flex mb-4">
+                        <img src="https://k-net.co.id/assets/images/secure.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <footer
+        class="absolute pt-7 px-4 pb-7 w-full left-0 right-0 bg-[#dd9d33] flex flex-row justify-center space-x-2 items-center">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            class="ml-2 lg:ml-0 h-7 lg:h-4 w-7 lg:w-4 text-white items-center" style="fill: rgba(255, 255, 255, 1);">
+            <path
+                d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm0-18c4.337 0 8 3.663 8 8s-3.663 8-8 8-8-3.663-8-8 3.663-8 8-8z">
+            </path>
+            <path
+                d="M12 17c.901 0 2.581-.168 3.707-1.292l-1.414-1.416C13.85 14.735 12.992 15 12 15c-1.626 0-3-1.374-3-3s1.374-3 3-3c.993 0 1.851.265 2.293.707l1.414-1.414C14.582 7.168 12.901 7 12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5z">
+            </path>
+        </svg> -->
+        <div class="font-medium text-white text-center text-xs lg:text-base">Copyright 2025 - PT.K-Link Indonesia -
+            Digital Network Marketing Bersistem Syariah
+            Berbasis Syariah</div>
+    </footer>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -769,23 +1088,35 @@
             });
         });
 
+        var swiperBanner = new Swiper(".promoSwiper", {
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000, // Auto geser setiap 3 detik
+                disableOnInteraction: false,
+            },
+
+            loop: true, // Looping agar tak berhenti di slide terakhir
+        });
+
         var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: { slidesPerView: 2, spaceBetween: 20 },
-                    1024: { slidesPerView: 3, spaceBetween: 30 }
-                }
-            });
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: { slidesPerView: 2, spaceBetween: 10 },
+                640: { slidesPerView: 4, spaceBetween: 20 },
+                1024: { slidesPerView: 5, spaceBetween: 30 }
+            }
+        });
 
     </script>
 </body>
