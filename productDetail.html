@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Link Indonesia</title>
+    <title>K-Link Indonesia | Product Detail</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
         rel="stylesheet">
@@ -22,8 +22,7 @@
     </style>
 </head>
 
-<body class="bg-[#f4f6f9] overflow-x-hidden">
-
+<body class="bg[#f4f6f9]">
     <!-- Navbar Desktop -->
     <nav class="bg-[#f4f6f9] p-4 w-full sticky top-0 z-50 drop-shadow-[0_10px_20px_rgba(0,0,0,0.13)]">
         <div class="container mx-auto flex justify-between items-center">
@@ -32,7 +31,7 @@
                     class="w-16 h-16 md:w-20 md:h-20 object-contain mr-2">
             </a>
             <div class="hidden md:flex justify-flex-start flex flex-wrap space-x-4 items-center font-medium">
-                <a href="#"
+                <a href="index.html"
                     class="cursor-pointer p-2 hover:text-white hover:bg-[#74ac80] focus:outline-none">Beranda</a>
                 <!-- Dropdown Product -->
                 <div class="relative inline-block dropdown">
@@ -432,513 +431,248 @@
 
             <!-- Profile dropdown -->
             <!-- <div class="relative px-2 py-1">
-                <div class="flex items-center space-x-3">
-                    <button type="button"
-                        class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
-                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">Open user menu</span>
-                        <img class="size-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="">
-                    </button>
-                    <h1 class="text-white">Tio Yudho Prasetio</h1>
-                </div>
-            </div> -->
+                    <div class="flex items-center space-x-3">
+                        <button type="button"
+                            class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+                            id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">Open user menu</span>
+                            <img class="size-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="">
+                        </button>
+                        <h1 class="text-white">Tio Yudho Prasetio</h1>
+                    </div>
+                </div> -->
         </div>
     </nav>
 
-    <!-- Search Fitur -->
-    <div class="bg-[#f4f6f9] w-full">
-        <div class="bg-[#fff0d7] flex justify-between items-center p-5">
-            <div class="rounded-md p-2">
-                <form action="https://k-net.co.id/shop/product/name" method="post" id="mc-embedded-subscribe-form"
-                    name="mc-embedded-subscribe-form" class="flex">
-                    <input class="p-3 bg-white focus:outline-none" type="text" name="name" value=""
-                        placeholder="Cari Produk...">
-                    <input class="text-white font-bold bg-[#ec7500] px-4 py-2 rounded-r-full cursor-pointer"
-                        type="submit" value="Cari">
-                </form>
-            </div>
-            <div class="hidden md:flex items-center space-x-4 findUs">
-                <span class="text-gray-700 font-semibold">Find us here</span>
-                <div class="socialMedia flex space-x-3 cursor-pointer">
-                    <i class='bx bxl-instagram-alt text-3xl text-gray-600 hover:text-[#E4405F]'></i>
-                    <i class='bx bxl-facebook-circle text-3xl text-gray-600 hover:text-[#1877F2]'></i>
-                    <i class='bx bxl-twitter text-3xl text-gray-600 hover:text-[#1DA1F2]'></i>
-                    <i class='bx bxl-youtube text-3xl text-gray-600 hover:text-[#1DA1F2]'></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Banner Promo -->
+    <!-- Detail Product -->
     <div class="bg-[#f4f6f9] p-4 w-full">
         <div class="container mx-auto">
-            <!-- Swiper Container -->
-            <div class="swiper promoSwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <img src="https://k-net.co.id/assets/images/promo.jpg" alt="Promo 1"
-                            class="w-full h-auto rounded-lg">
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <img src="https://k-net.co.id/assets/images/tracking.jpg" alt="Promo 2"
-                            class="w-full h-auto rounded-lg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-3 xl:gap-4 md:pt-5">
 
-    <!-- Browse Category -->
-    <div class="bg-[#f4f6f9] p-4 w-full">
-        <div class="container mx-auto">
-            <h2 class="text-xl font-bold mb-4">Browse Category</h2>
-
-            <!-- Swiper Container -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper mb-16">
-
-                    <!-- Card 1 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/9359/9359415.png"
-                                    class="w-24 h-24 object-cover" alt="Cek Transaksi">
-                                <h3 class="text-lg font-semibold mt-2">Cek Transaksi</h3>
+                <!-- Gambar Produk -->
+                <div class="flex flex-col">
+                    <section class="bg-[#ffffff] rounded-lg p-4 mb-3 xl:mb-4">
+                        <div class="swiper thumbnailSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- Gambar Produk -->
+                                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/08-rp23v1--K-OMEGA_SQUA_PLUS.jpg"
+                                        alt="Produk" class="w-full object-cover">
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Gambar Produk -->
+                                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/08-rp23v1--K-OMEGA_SQUA_PLUS.jpg"
+                                        alt="Produk" class="w-full object-cover">
+                                </div>
                             </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2885/2885417.png"
-                                    class="w-24 h-24 object-cover" alt="Info Jaringan">
-                                <h3 class="text-lg font-semibold mt-2">Info Jaringan</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2108/2108625.png"
-                                    class="w-24 h-24 object-cover" alt="Bonus">
-                                <h3 class="text-lg font-semibold mt-2">Bonus</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/3258/3258446.png"
-                                    class="w-24 h-24 object-cover" alt="K-Wallet">
-                                <h3 class="text-lg font-semibold mt-2">K-Wallet</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/9284/9284424.png"
-                                    class="w-24 h-24 object-cover" alt="Keranjang">
-                                <h3 class="text-lg font-semibold mt-2">Keranjang</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/942/942748.png"
-                                    class="w-24 h-24 object-cover" alt="MyProfile">
-                                <h3 class="text-lg font-semibold mt-2">My Profile</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div class="swiper-slide">
-                        <a href="">
-                            <div
-                                class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/128/994/994377.png"
-                                    class="w-24 h-24 object-cover" alt="Cek Transaksi">
-                                <h3 class="text-lg font-semibold mt-2">Kode Etik</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <a href=""></a>
-                    <div class="swiper-slide">
-                        <div
-                            class="bg-white p-4 rounded-lg text-center drop-shadow-lg flex flex-col items-center min-h-[200px] justify-center">
-                            <img src="https://www.k-net.co.id/assets/images/kmart_logo.jpeg" class="h-24 object-cover"
-                                alt="Cek Transaksi">
-                            <h3 class="text-lg font-semibold mt-2">Promo Upgrade Member</h3>
+                            <div class="swiper-pagination"></div>
                         </div>
+                    </section>
+
+                    <div class="hidden md:block">
+                        <section class="bg-[#fff] rounded-lg p-4 mb-3 xl:mb-4">
+                            <div class="text-[#353535]p6">
+                                Informasi Produk
+                            </div>
+                            <hr class="mt-4 border-t border-gray-300">
+                            <div class="text-[#353535] flex items-center justify-between pt-4">
+                                <div>Berat Pengiriman</div>
+                                <div>150 gr</div>
+                            </div>
+                            <div class="text-[#353535] flex items-center justify-between pt-4">
+                                <div>Berat Bersih Satuan</div>
+                                <div>30 ml</div>
+                            </div>
+                            <div class="text-[#353535] flex items-center justify-between pt-4">
+                                <div>Pemesanan Minimal</div>
+                                <div>1 pcs</div>
+                            </div>
+                        </section>
+
+                        <section class="bg-white p-6 mb-3 xl:mb-4">
+                            <h2 class="h3 pb-2">Jaminan Mutu</h2>
+                            <div class="pt-4 flex items-center">
+                                <i class='text-xl bx bx-check-circle' style='background: linear-gradient(to right, #4ca54c, #76c345);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;'></i>
+                                <div>100% Produk Original</div>
+                                <button type="button" class="ml-auto text-xl text-primary">
+                                    <i class='text-xl bx bx-info-circle' style='background: linear-gradient(to right, #4ca54c, #76c345);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;'></i>
+                                </button>
+                            </div>
+                        </section>
                     </div>
                 </div>
 
-                <!-- Pagination & Navigation -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- New Promo Container -->
-    <div class="bg-[#f4f6f9] p-4 w-full">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl text-[#353535] font-bold">New Promo</h2>
-                <button type="button" class="cursor-pointer">
-                    <span class="text-xl text-[#28a154] font-medium">Lihat Semua</span>
-                </button>
-            </div>
+                <!-- Judul -->
+                <section class="rounded-lg">
+                    <div class="flex flex-col">
+                        <section class="bg-[#ffffff] p-6 mb-3 xl:mb-4">
+                            <!-- Judul Produk, rating, dan jumlah penjualan -->
+                            <h1 class="text-2xl font-semibold mb-2 text-[#353535]">K-Omega Squa</h1>
+                            <div class="flex flex-row items-center">
+                                <span class="text-[#959595] text-lg"><i
+                                        class='bx bxs-star text-xl text-[#FFD52DFF]'></i>
+                                    4.9</span>
+                                <span class="text-[#959595] text-lg px-1">|</span>
+                                <span class="text-[#959595] text-lg">Terjual 11483</span>
+                            </div>
 
-            <!-- Wrapper untuk grid card New Promo -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <!-- Harga produk -->
+                            <div class="flex flex-row items-center mt-10">
+                                <h1 class="text-[#353535] text-3xl font-bold">Rp285.000</h1>
+                                <span class="text-[#353535] text-xl font-medium">&nbsp;/ pcs</span>
+                            </div>
 
-                <!-- Card Produk 1 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202408/09-2bnxoc--K-Ion_Nano_Premium_X.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Ion Nano Premium x</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp1.400.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                            <!-- Harga berdasarkan wilayah -->
+                            <div class="flex flex-col mt-10">
+                                <h3 class="text-[#353535] text-sm font-bold">Harga berdasarkan Wilayah</h3>
+                                <div class="flex flex-row gap-4">
+                                    <button
+                                        class="flex items-center justify-center cursor-pointer my-2 px-4 py-1 rounded-full bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white">
+                                        <span class="text-xs font-medium">Harga Wilayah A</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center justify-center cursor-pointer my-2 px-4 py-1 rounded-full bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white">
+                                        <span class="text-xs font-medium">Harga Wilayah A</span>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]"><a
-                                href="productDetail.html">Masukkan Keranjang</a>
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
+                            <hr class="mt-4 border-t border-gray-300">
 
-                <!-- Card Produk 2 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://k-net.co.id/assets/images/products/thumb/NCell.jpg" alt="Produk"
-                        class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">ncell - botanical beverage mix grape
-                            with brocoli extract</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                            <!-- Kuantitas Produk -->
+                            <div class="flex items-center justify-between pt-4">
+                                <h3 class="text-lg font-semibold text-[#353535]">Kuantitas</h3>
+                                <div class="flex items-center gap-4">
+                                    <button type="button" id="decrease"
+                                        class="focus:outline-none cursor-pointer text-gray-400" disabled>
+                                        <i class='bx bx-minus-circle text-2xl'></i>
+                                    </button>
+                                    <input type="text"
+                                        class="text-base font-semibold border-b border-gray-400 text-center focus:outline-none w-14"
+                                        name="quantity" id="quantity" value="1" readonly>
+                                    <button type="button" id="increase" class="focus:outline-none cursor-pointer">
+                                        <i class='bx bx-plus-circle text-2xl text-gray-700'></i>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
-                <!-- Card Produk 3 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/08-rp23v1--K-OMEGA_SQUA_PLUS.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Omega Squa</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
+                            <!-- Muncul jika produk termasuk bundle -->
+                            <hr class="mt-4 border-t border-gray-300">
+                            <h3 class="mt-4 text-lg font-semibold text-[#353535]">Paket Produk:</h3>
+                            <div class="p-3 rounded-lg bg-[#f4f6f9] flex rounded-none rounded-t-lg mt-4 rounded-b-lg">
+                                <a class="inline-block" href="">
+                                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/08-rp23v1--K-OMEGA_SQUA_PLUS.jpg"
+                                        alt="K-Omega Squa" class="h-16 w-16 mr-2 object-cover">
+                                </a>
+                                <div class="flex-1">
+                                    <div class="flex">
+                                        <div class="flex-1">
+                                            <a class="inline-block" href="">K-Omega Squa</a>
+                                        </div>
+                                        <div class="text-xxs text-neutral-1 pl-1">x4</div>
+                                    </div>
                                 </div>
                             </div>
+                        </section>
+
+                        <section class="bg-[#f4f6f9] -mt-4 mb-0 xl:mb-4 relative">
+                            <div class="p-6 md:px-0 font-bold text-lg text-black leading-9">Promo Tersedia untuk Produk
+                                ini</div>
+
+                            <!-- Swiper Container -->
+                            <div class="swiper promoSwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide">
+                                        <div class="p-3 rounded-lg bg-[#ffffff] flex gap-4">
+                                            <a class="flex justify-center items-center" href="">
+                                                <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202402/07-jcldk2--46__DISKON_10_.jpg"
+                                                    alt="K-Omega Squa" class="h-10 w-full object-cover">
+                                            </a>
+                                            <div class="flex-1">
+                                                <div class="flex flex-col gap-2">
+                                                    <div class="flex-1 text-[#353535] font-bold text-md">
+                                                        <a class="inline-block" href="">Promo Diskon 10%
+                                                            Pembelanjaan Customer</a>
+                                                    </div>
+                                                    <div class="text-[#959595] text-xs text-neutral-1 pl-1"><i
+                                                            class='bx bx-calendar'></i> Hingga December 31, 2025</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide">
+                                        <div class="p-3 rounded-lg bg-[#ffffff] flex gap-4">
+                                            <a class="flex justify-center items-center" href="">
+                                                <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202402/07-jcldk2--46__DISKON_10_.jpg"
+                                                    alt="K-Omega Squa" class="h-10 w-full object-cover">
+                                            </a>
+                                            <div class="flex-1">
+                                                <div class="flex flex-col gap-2">
+                                                    <div class="flex-1 text-[#353535] font-bold text-md">
+                                                        <a class="inline-block" href="">Promo Diskon 10%
+                                                            Pembelanjaan Customer</a>
+                                                    </div>
+                                                    <div class="text-[#959595] text-xs text-neutral-1 pl-1"><i
+                                                            class='bx bx-calendar'></i> Hingga December 31,
+                                                        2025</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Informasi produk dan jaminan mutu mobile version -->
+                        <div class="mt-4 md:hidden">
+                            <section class="bg-[#fff] rounded-lg p-4 mb-3 xl:mb-4">
+                                <div class="text-[#353535]p6">
+                                    Informasi Produk
+                                </div>
+                                <hr class="mt-4 border-t border-gray-300">
+                                <div class="text-[#353535] flex items-center justify-between pt-4">
+                                    <div>Berat Pengiriman</div>
+                                    <div>150 gr</div>
+                                </div>
+                                <div class="text-[#353535] flex items-center justify-between pt-4">
+                                    <div>Berat Bersih Satuan</div>
+                                    <div>30 ml</div>
+                                </div>
+                                <div class="text-[#353535] flex items-center justify-between pt-4">
+                                    <div>Pemesanan minimal</div>
+                                    <div>1 pcs</div>
+                                </div>
+                            </section>
+
+                            <section class="bg-white p-6 mb-3 xl:mb-4">
+                                <h2 class="h3 pb-2">Jaminan Mutu</h2>
+                                <div class="pt-4 flex items-center">
+                                    <i class='text-xl bx bx-check-circle' style='background: linear-gradient(to right, #4ca54c, #76c345);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;'></i>
+                                    <div>100% Produk Original</div>
+                                    <button type="button" class="ml-auto text-xl text-primary">
+                                        <i class='text-xl bx bx-info-circle' style='background: linear-gradient(to right, #4ca54c, #76c345);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;'></i>
+                                    </button>
+                                </div>
+                            </section>
                         </div>
 
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
                     </div>
-                </div>
-                <!-- End Card Produk -->
-
-                <!-- Card Produk 4 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202403/04-867ma6--Gamat_Go.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Gamat Go</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp384.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Best Seller Container -->
-    <div class="bg-[#f4f6f9] p-4 mt-10 w-full mb-12">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl text-[#353535] font-bold">Best Seller</h2>
-                <button type="button" class="cursor-pointer">
-                    <span class="text-xl text-[#28a154] font-medium">Lihat Semua</span>
-                </button>
-            </div>
-
-            <!-- Wrapper untuk grid card Best Seller -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
-                <!-- Card Produk 1 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202209/06-5u6i15--K-LIQUID_CHLOROPHYLL.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-Liquid Chlorophyll (500Ml)</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
-                <!-- Card Produk 2 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202401/11-hrtrf6--DURIAN.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">K-C Kopi Durian</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
-                <!-- Card Produk 3 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="https://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202404/05-y5xa9d--WhatsApp_Image_2024-04-05_at_3_45_28_PM.jpeg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Kinotakara (10 Pcs)</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp480.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
-                <!-- Card Produk 4 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                    <!-- Gambar Produk -->
-                    <img src="http://kmart-production.s3.ap-southeast-1.amazonaws.com/attachment/202401/11-al4w4b--PROPOLIS.jpg"
-                        alt="Produk" class="w-full object-cover">
-
-                    <div class="p-4 w-full">
-                        <!-- Kode Produk -->
-                        <!-- <p class="text-[#353535] text-sm font-semibold">HD012</p> -->
-                        <!-- Nama Produk -->
-                        <h3 class="text-lg text-left font-bold text-[#353535] mt-2">Propolis Single Bottle</h3>
-
-                        <!-- Harga -->
-                        <div class="flex flex-row w-full mt-2 text-sm">
-                            <div class="flex flex-col text-left gap-1">
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#353535] text-xl font-medium">Rp210.000</span>
-                                    <span class="text-[#353535] text-lg">&nbsp;/ pcs</span>
-                                </div>
-
-                                <div class="flex flex-row items-center">
-                                    <span class="text-[#959595] text-lg"><i
-                                            class='bx bxs-star text-xl text-[#FFD52DFF]'></i> 4.9</span>
-                                    <span class="text-[#959595] text-lg px-1">|</span>
-                                    <span class="text-[#959595] text-lg">Terjual 11483</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button Masukkan Keranjang -->
-                        <button
-                            class="bg-[linear-gradient(to_right,#4ca54c,#76c345)] text-white font-bold px-4 py-2 mt-3 rounded-md w-full hover:bg-[#d66500]">
-                            Masukkan Keranjang
-                        </button>
-                    </div>
-                </div>
-                <!-- End Card Produk -->
-
+                </section>
             </div>
         </div>
     </div>
@@ -1022,7 +756,22 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script>
+        new Swiper(".promoSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            loop: false,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.1,
+                },
+                1024: {
+                    slidesPerView: 1.1,
+                },
+            }
+        });
+
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
 
@@ -1083,36 +832,37 @@
             });
         });
 
-        var swiperBanner = new Swiper(".promoSwiper", {
-            spaceBetween: 20,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000, // Auto geser setiap 3 detik
-                disableOnInteraction: false,
-            },
-
-            loop: true, // Looping agar tak berhenti di slide terakhir
-        });
-
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
+        var swiper = new Swiper(".thumbnailSwiper", {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
             loop: false,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                320: { slidesPerView: 2.3, spaceBetween: 10 },
-                640: { slidesPerView: 4.3, spaceBetween: 20 },
-                1024: { slidesPerView: 5.3, spaceBetween: 30 }
-            }
         });
 
+        // Quantity control
+        var quantityInput = document.getElementById("quantity");
+        var increaseBtn = document.getElementById("increase");
+        var decreaseBtn = document.getElementById("decrease");
+
+        increaseBtn.addEventListener("click", function () {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+            decreaseBtn.removeAttribute("disabled");
+        });
+
+        decreaseBtn.addEventListener("click", function () {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+                if (value - 1 === 1) {
+                    decreaseBtn.setAttribute("disabled", "true");
+                }
+            }
+        });
     </script>
 </body>
 
